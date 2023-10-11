@@ -1,0 +1,17 @@
+#
+# Main arguments, all optional
+#
+title: Licht Mobiel
+widget_dimensions: [100, 120]
+widget_margins: [1, 1]
+columns: 4
+
+layout:
+    - include: labels
+    - include: dashboards
+    - include: woonkamer_licht
+    - include: werkkamer_licht
+    - label.woonkamer,lamp.boekenkast,lamp.dubbelekast,lamp.ledlamp
+    - label.werkkamer, lamp.werkkamer
+    - label.hal,lamp.buitenlamp
+    - laad.main.dashboard.mobiel

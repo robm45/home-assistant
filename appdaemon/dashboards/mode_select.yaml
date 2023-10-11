@@ -1,0 +1,60 @@
+select.aanwezigheid:
+   widget_type: input_select
+   title: Aanwezigheid
+   select_style: "font-size: 10pt;"
+   entity: input_select.aanwezigheid
+
+select.dagdeel:
+   widget_type: input_select
+   title: Dagdeel
+   select_style: "font-size: 10pt;"
+   entity: input_select.dagdeel
+   
+mode.nacht:
+    widget_type: mode
+    widget_style: "background: blue"
+    icon_on: mdi-weather-night
+    icon_off: mdi-weather-night-partly-cloudy
+    icon_style_active: "color: black"
+    icon_style_inactive: "color: grey"
+    title: Nacht
+    entity: input_select.aanwezigheid
+    mode: Nacht
+    script: script.nacht_mode
+
+mode.thuis:
+    widget_type: mode
+    widget_style: "background: green"
+    icon_on: mdi-home-assistant
+    icon_off: mdi-home-assistant
+    icon_style_active: "color: black"
+    icon_style_inactive: "color: grey"
+    title: Dag 
+    entity: input_select.aanwezigheid
+    mode: Dag
+    script: script.thuis_mode 
+
+mode.vakantie:
+    widget_type: mode
+    widget_style: "background: red"
+    icon_on: mdi-car
+    icon_off: mdi-car
+    icon_style_active: "color: black"
+    icon_style_inactive: "color: grey"
+    title: Vakantie
+    entity: input_select.aanwezigheid
+    mode: Vakantie
+    script: script.vakantie 
+
+mode.weg:
+    widget_type: mode
+    widget_style: "background: orange"
+    icon_on: mdi-road
+    icon_off: mdi-road
+    icon_style_active: "color: black"
+    icon_style_inactive: "color: grey"
+    title: Weg 
+    entity: input_select.aanwezigheid
+    mode: Weg
+    script: script.thuis_mode 
+

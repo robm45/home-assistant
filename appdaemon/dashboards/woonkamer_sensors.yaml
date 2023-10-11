@@ -1,0 +1,28 @@
+sensor.woonkamer.licht:
+    widget_type: sensor
+    widget_style: "background: lightblue"
+    title: lichtsensor
+    title_style: "font-size: 10pt; color: black"
+    value_style: "font-size: 22pt; color: black;"
+    entity: sensor.xiaomi_lumi_sen_ill_mgl01_illuminance_2
+    units: "lx"
+    precision: 0
+
+sensor.woonkamer.achterdeursensor:
+    widget_type: binary_sensor
+    entity: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening_3
+    title: achterdeur
+    title_style: "font-size: 10pt;"
+
+sensor.woonkamer.bewegingssensor:
+    widget_type: binary_sensor
+    entity: binary_sensor.lumi_lumi_sensor_motion_aq2_motion_2
+    title: bewegingssensor
+    title_style: "font-size: 10pt;"
+
+sensor.woonkamer.trapkastsensor:
+    widget_type: binary_sensor
+    entity: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening_2
+    title: trapkast
+    title_style: "font-size: 10pt;"
+

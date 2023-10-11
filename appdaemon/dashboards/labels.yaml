@@ -1,0 +1,65 @@
+label.binnen:
+    widget_type: label
+    widget_style: "background: green"
+    text: Binnen
+    value_style: "font-size: 12pt; color: black;"
+
+label.buiten:
+    widget_type: label
+    widget_style: "background: green"
+    text: Buiten
+    value_style: "font-size: 12pt; color: black;"
+
+label.werkkamer:
+    widget_type: label
+    widget_style: "background: green"
+    text: Werkkamer
+    value_style: "font-size: 12pt; color: black;"
+
+label.kleinekamer:
+    widget_type: label
+    widget_style: "background: green"
+    text: kleine kamer
+    value_style: "font-size: 12pt; color: black;"
+
+label.slaapkamer:
+    widget_type: label
+    widget_style: "background: green"
+    text: slaapkamer
+    value_style: "font-size: 12pt; color: black;"
+
+label.zolderkamer:
+    widget_type: label
+    widget_style: "background: green"
+    text: zolderkamer
+    value_style: "font-size: 12pt; color: black;"
+
+label.woonkamer:
+    widget_type: label
+    widget_style: "background: green"
+    text: Woonkamer
+    value_style: "font-size: 12pt; color: black;"
+
+label.hal:
+    widget_type: label
+    widget_style: "background: green"
+    text: Hal
+    value_style: "font-size: 12pt; color: black;"
+
+label.begane.grond:
+    widget_type: label
+    widget_style: "background: green"
+    text: Begane grond
+    value_style: "font-size: 12pt; color: black;"
+
+label.1st.verdieping:
+    widget_type: label
+    widget_style: "background: green"
+    text: 1st verdieping
+    value_style: "font-size: 12pt; color: black;"
+
+label.2de.verdieping:
+    widget_type: label
+    widget_style: "background: green"
+    text: 2de verdieping
+    value_style: "font-size: 12pt; color: black;"

@@ -1,0 +1,26 @@
+sensor.slaapkamer.temperatuur:                                                                  
+    widget_type: sensor                                                                        
+    entity: sensor.lumi_lumi_weather_temperature_3
+    title: temperatuur             
+    widget_style: "background: lightblue"
+    title_style: "font-size: 10pt; color: black;"
+    value_style: "font-size: 22pt; color: black;"
+    precision: 1
+                                                                                            
+sensor.slaapkamer.vochtigheid:                                                               
+    widget_type: sensor                                                                     
+    entity: sensor.lumi_lumi_weather_humidity_3
+    title: vochtigheid                                             
+    widget_style: "background: lightblue"
+    title_style: "font-size: 10pt; color: black;"
+    value_style: "font-size: 22pt; color: black;"
+    precision: 0
+                                                                                            
+sensor.slaapkamer.luchtdruk:                                                               
+    widget_type: sensor                                                                     
+    entity: sensor.lumi_lumi_weather_pressure_3
+    title: luchtdruk                                             
+    widget_style: "background: lightblue"
+    title_style: "font-size: 10pt; color: black;"
+    value_style: "font-size: 22pt; color: black;"
+    precision: 0

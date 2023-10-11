@@ -1,0 +1,16 @@
+#
+# Main arguments, all optional
+#
+title: Rookmelders
+widget_dimensions: [95, 90]
+widget_margins: [5, 5]
+columns: 7
+
+layout:
+    - include: labels
+    - include: dashboards
+    - include: rookmelders_bg
+#    - include: rookmelders_1st
+#    - include: rookmelders_2de
+    - label.begane.grond , sensor.keuken.rookmelder, sensor.kamer.rookmelder, sensor.hal.rookmelder
+    - laad.main.dashboard.mobiel

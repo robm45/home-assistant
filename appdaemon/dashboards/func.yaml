@@ -1,0 +1,19 @@
+func.clock:
+    widget_type: clock
+    widget_style: "background: green;"
+    time_format: "24hr"
+    time_style: "font-size: 22pt; color: black;"
+    date_style: "font-size: 22; color: black;"
+    date_format_country: "nl"
+    date_format_options:
+      weekday: "long"
+      day: "numeric"
+      month: "long"
+
+func.reload:
+    widget_type: reload
+    title: herlaad
+    icon_inactive: fas-recycle
+
+
+

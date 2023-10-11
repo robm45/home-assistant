@@ -1,0 +1,16 @@
+sun.sunrise:
+    widget_type: sensor
+    widget_style: "background: darkgreen"
+    title: Zonsopkomst
+    title_style: "font-size: 10pt;"
+    value_style: "font-size: 22pt; color: white;"
+    entity: sensor.sun_rise
+   
+sun.sunset:
+    widget_type: sensor
+    widget_style: "background: darkgreen"
+    title: Zonsondergang
+    title_style: "font-size: 10pt;"
+    value_style: "font-size: 22pt; color: white;"
+    entity: sensor.sun_set
+   

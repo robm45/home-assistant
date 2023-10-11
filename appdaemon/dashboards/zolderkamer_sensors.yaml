@@ -1,0 +1,34 @@
+sensor.zolderkamer.temperatuur:                                                                  
+    widget_type: sensor                                                                        
+    widget_style: "background: lightblue"
+    entity: sensor.lumi_lumi_weather_temperature_2
+    title: temperatuur             
+    title_style: "font-size: 10pt; color: black;"
+    value_style: "font-size: 22pt; color: black;"
+    precision: 1
+                                                                                            
+sensor.zolderkamer.vochtigheid:                                                               
+    widget_type: sensor                                                                     
+    widget_style: "background: lightblue"
+    entity: sensor.lumi_lumi_weather_humidity_2
+    title: vochtigheid                                             
+    title_style: "font-size: 10pt; color: black;"
+    value_style: "font-size: 22pt; color: black;"
+    precision: 0
+                                                                                            
+sensor.zolderkamer.luchtdruk:                                                               
+    widget_type: sensor                                                                     
+    widget_style: "background: lightblue"
+    entity: sensor.lumi_lumi_weather_pressure_2
+    title: luchtdruk                                             
+    title_style: "font-size: 10pt; color: black;"
+    value_style: "font-size: 22pt; color: black;"
+    precision: 0
+                                                                                            
+sensor.zolderkamer.raamsensor:
+    widget_type: binary_sensor
+    widget_style: "background: lightblue"
+    entity: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening_5
+    title: raamsensor
+    title_style: "font-size: 10pt; color: black;"
+    value_style: "font-size: 22pt; color: black;"

@@ -1,0 +1,21 @@
+#
+# Main arguments, all optional
+#
+title: Sensors
+widget_dimensions: [95, 90]
+widget_margins: [5, 5]
+columns: 7
+
+layout:
+    - include: labels
+    - include: woonkamer_sensors
+    - include: hal_sensors
+    - include: werkkamer_sensors
+    - include: kleinekamer_sensors
+    - include: slaapkamer_sensors
+    - include: zolderkamer_sensors
+    - label.woonkamer, sensor.woonkamer.achterdeursensor,sensor.woonkamer.trapkastsensor,sensor.woonkamer.bewegingssensor,spacer(1x1), sensor.woonkamer.licht
+    - label.hal, sensor.hal.voordeursensor
+    - label.werkkamer, sensor.werkkamer.raamsensor, spacer(1x1), sensor.werkkamer.bewegingssensor, spacer(1x1), sensor.werkkamer.licht
+    - label.kleinekamer, sensor.kleinekamer.raamsensor
+    - label.zolderkamer, sensor.zolderkamer.raamsensor

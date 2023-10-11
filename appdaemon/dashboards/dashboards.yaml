@@ -1,0 +1,77 @@
+laad.main.dashboard:
+    widget_type: navigate
+    title: Hoofd Panel
+    icon_inactive: mdi-view-dashboard
+    dashboard: Main
+
+laad.licht.dashboard:
+    widget_type: navigate
+    title: Licht Panel
+    icon_inactive: mdi-view-dashboard
+    dashboard: Licht
+
+laad.klimaat.dashboard:
+    widget_type: navigate
+    title: Klimaat Panel
+    icon_inactive: mdi-view-dashboard
+    args:
+      timeout: 10
+      return: Main
+    dashboard: Klimaat
+
+laad.sensors.dashboard:
+    widget_type: navigate
+    title: Sensors Panel
+    icon_inactive: mdi-view-dashboard
+    args:
+      timeout: 10
+      return: Main
+    dashboard: Sensors
+
+laad.rookmelders.dashboard:
+    widget_type: navigate
+    title: Rookmelders Panel
+    icon_inactive: mdi-view-dashboard
+    args:
+      timeout: 10
+      return: Main
+    dashboard: Rookmelders
+
+laad.main.dashboard.mobiel:
+    widget_type: navigate
+    title: Hoofd Panel
+    icon_inactive: mdi-view-dashboard
+    dashboard: Main_mobiel
+
+laad.licht.dashboard.mobiel:
+    widget_type: navigate
+    title: Licht Panel
+    icon_inactive: mdi-view-dashboard
+    dashboard: Licht_mobiel
+
+laad.klimaat.dashboard.mobiel:
+    widget_type: navigate
+    title: Klimaat Panel
+    icon_inactive: mdi-view-dashboard
+    args:
+      timeout: 10
+      return: Main_mobiel
+    dashboard: Klimaat_mobiel
+
+laad.sensors.dashboard.mobiel:
+    widget_type: navigate
+    title: Sensors Panel
+    icon_inactive: mdi-view-dashboard
+    args:
+      timeout: 10
+      return: Main_mobiel
+    dashboard: Sensors_mobiel
+
+laad.rookmelders.dashboard.mobiel:
+    widget_type: navigate
+    title: Rookmelders Panel
+    icon_inactive: mdi-view-dashboard
+    args:
+      timeout: 10
+      return: Main_mobiel
+    dashboard: Rookmelders_mobiel

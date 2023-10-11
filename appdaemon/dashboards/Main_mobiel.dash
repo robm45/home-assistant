@@ -1,0 +1,23 @@
+#
+# Main arguments, all optional
+#
+title: Hello Panel
+widget_dimensions: [95, 90]
+widget_margins: [5, 5]
+columns: 4
+
+
+layout: 
+   - include: labels
+   - include: mode_select
+   - include: sun
+   - include: func
+   - include: dashboards
+   - include: klimaat
+   - include: woonkamer_sensors
+   - sun.sunrise, func.clock(2x1), sun.sunset
+   - label.binnen, temp.binnen, humidity.binnen, co2.binnen
+   - label.buiten, temp.buiten, humidity.buiten
+   - mode.nacht,mode.thuis
+   - laad.licht.dashboard.mobiel,laad.klimaat.dashboard.mobiel,laad.sensors.dashboard.mobiel,laad.rookmelders.dashboard.mobiel 
+   - spacer(3x1), func.reload

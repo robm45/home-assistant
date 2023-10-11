@@ -1,0 +1,5 @@
+sensor.hal.voordeursensor:
+    widget_type: binary_sensor
+    entity: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening_4
+    title: voordeur
+    title_style: "font-size: 10pt;"

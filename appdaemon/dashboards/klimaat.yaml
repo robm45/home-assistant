@@ -1,0 +1,49 @@
+temp.buiten:                                                                               
+    widget_type: sensor                                                                    
+    widget_style: "background: lightblue"                                                     
+    title: Buitentemp                                                                      
+    title_style: "font-size: 10pt; color: black"                                                        
+    value_style: "font-size: 22pt; color: black;"                                          
+    entity: sensor.weather_station_weather_station_weather_station_buitenmodule_temperature
+    units: "&deg;C"                              
+    precision: 1                                 
+                                                 
+temp.binnen:                                     
+    widget_type: sensor                          
+    widget_style: "background: lightblue"                                                     
+    title: Binnentemp                            
+    entity: sensor.weather_station_temperature                                          
+    title_style: "font-size: 10pt; color: black"                                                     
+    value_style: "font-size: 22pt; color: black;"                                       
+    units: "&deg;C"                                                                     
+    precision: 1                                                                        
+                                                                                        
+humidity.binnen:                                                                        
+    widget_type: sensor                                                                 
+    widget_style: "background: lightblue"                                                     
+    title: Vochtigheid binnen                                                           
+    title_style: "font-size: 10pt; color: black"                                                     
+    value_style: "font-size: 22pt; color: black;"                                       
+    entity: sensor.weather_station_humidity                                             
+    units: "%"                                                                          
+    precision: 1                                                                        
+                                                                                        
+humidity.buiten:                                                                        
+    widget_type: sensor                                                                 
+    widget_style: "background: lightblue"                                                     
+    title: Vochtigheid buiten                                                           
+    title_style: "font-size: 10pt; color: black"                                                     
+    value_style: "font-size: 22pt; color: black;"                                       
+    entity: sensor.weather_station_weather_station_weather_station_buitenmodule_humidity
+    units: "%"                                            
+    precision: 1  
+
+co2.binnen:                                                                             
+    widget_type: sensor                                                                 
+    widget_style: "background: lightblue"                                                     
+    title: CO2                                                                          
+    title_style: "font-size: 10pt; color: black"                                                     
+    value_style: "font-size: 18pt; color: black;"                                       
+    entity: sensor.weather_station_co2           
+    units: "ppm"                                                                           
+    precision: 0     

@@ -1,0 +1,76 @@
+#
+# Main arguments, all optional
+#
+title: Test
+widget_dimensions: [95, 90]
+widget_margins: [5, 5]
+columns: 6
+
+lamp.buitenlamp:
+    widget_type: light
+    entity: light.innr_rb_265_light_1
+    title: buitenlamp
+    title_style: "font-size: 10pt;"
+ 
+lamp.boekenkast:
+    widget_type: light
+    entity: light.lichttradfriboekenkast_light 
+    title: Boekenkast
+    title_style: "font-size: 10pt;"
+ 
+lamp.dubbelekast:
+    widget_type: light
+    entity: light.lichttradfridubbelekast_light 
+    title: Dubbelekast
+    title_style: "font-size: 10pt;"
+
+lamp.ledlamp:
+    widget_type: switch
+    entity: switch.innr_sp_220_switch
+    title: Ledlamp
+    title_style: "font-size: 10pt;"
+    
+laad.main.dashboard:
+    widget_type: navigate
+    widget_style: "background: blue"
+    title: Hoofd Panel
+    icon_inactive: mdi-view-dashboard
+    dashboard: Main 
+
+select.dagdeel:
+   widget_type: input_select
+   title: Dagdeel
+   select_style: "font-size: 10pt;"
+   entity: input_select.dagdeel
+
+select.aanwezigheid:
+   widget_type: input_select
+   title: Aanwezigheid
+   select_style: "font-size: 10pt;"
+   entity: input_select.aanwezigheid
+
+
+mode.nacht:
+    widget_type: mode
+    widget_style: "background: blue"
+    icon_on: mdi-weather-night
+    icon_off: mdi-weather-night-partly-cloudy
+    title: Nacht stand
+    entity: input_select.aanwezigheid
+    mode: Nacht
+    script: script.nacht_mode
+
+mode.thuis:
+    widget_type: mode
+    widget_style: "background: green"
+    icon_on: mdi-home
+    icon_off: mdi-home-outline
+    title: Thuis stand
+    entity: input_select.aanwezigheid
+    mode: Thuis
+    script: script.thuis_mode 
+
+layout:
+    - lamp.buitenlamp,lamp.boekenkast,lamp.dubbelekast,lamp.ledlamp
+    - mode.nacht,mode.thuis, select.aanwezigheid
+    - laad.main.dashboard

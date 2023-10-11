@@ -1,0 +1,9 @@
+camera.voordeur:
+   entity_id: camera.achterdeur_sub 
+   base_url: http://192.168.171.71
+   stream: on
+
+camera.achterdeur:
+   entity_id: camera.achterdeur_sub
+   base_url: http://192.168.171.71
+   stream: on

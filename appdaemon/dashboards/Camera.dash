@@ -1,0 +1,11 @@
+#
+# Main arguments, all optional
+#
+title: Test
+widget_dimensions: [400, 400]
+widget_margins: [5, 5]
+columns: 2
+
+layout:
+    - include: camera
+    - camera.voordeur, camera.achterdeurr

@@ -1,0 +1,16 @@
+#
+# Main arguments, all optional
+#
+title: Licht
+widget_dimensions: [95, 120]
+widget_margins: [1, 1]
+columns: 7
+
+layout:
+    - include: labels
+    - include: woonkamer_licht
+    - include: werkkamer_licht
+    - include: dashboards
+    - label.woonkamer,lamp.buitenlamp,lamp.boekenkast,lamp.dubbelekast,lamp.ledlamp
+    - label.werkkamer, lamp.werkkamer
+    - laad.main.dashboard

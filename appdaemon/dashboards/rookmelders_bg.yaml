@@ -1,0 +1,18 @@
+sensor.keuken.rookmelder:                                                                  
+    widget_type: sensor                                                                        
+    entity: binary_sensor.frient_a_s_smszb_120_smoke_2
+    title: keuken             
+    title_style: "font-size: 10pt;"                                                           
+
+                                                                                            
+sensor.kamer.rookmelder:                                                                  
+    widget_type: sensor                                                                        
+    entity: binary_sensor.frient_a_s_smszb_120_smoke_5
+    title: kamer             
+    title_style: "font-size: 10pt;"                                                           
+
+sensor.hal.rookmelder:                                                                  
+    widget_type: sensor                                                                        
+    entity: sensor.frient_a_s_smszb_120_battery_6
+    title: hal             
+    title_style: "font-size: 10pt;"                                                           
