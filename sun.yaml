@@ -7,3 +7,4 @@
     unique_id: "next_sunset"
     state: '{{ as_timestamp(states.sun.sun.attributes.next_setting) | timestamp_custom(" %I:%M %p") | replace(" 0", "") }}'
     icon: mdi:weather-sunset-down
+
