@@ -1,27 +1,8 @@
-lamp.buitenlamp:
-    widget_type: light
-    entity: light.innr_rb_265_light_1
-    title: Buitenlamp
-    title_style: "font-size: 10pt;"
-
-
-#lamp.boekenkast:
-#    widget_type: light
-#    entity: light.lichttradfriboekenkast_light
-#    title: Boekenkast
-#    title_style: "font-size: 10pt"
-
 lamp.boekenkast:
     widget_type: light
     entity: light.tradfri_driver_30w 
     title: Boekenkast
     title_style: "font-size: 10pt"
-
-#lamp.dubbelekast:
-#    widget_type: light
-#    entity: light.lichttradfridubbelekast_light
-#    title: Dubbelekast
-#    title_style: "font-size: 10pt;"
 
 lamp.dubbelekast:
     widget_type: light

@@ -10,7 +10,9 @@ layout:
     - include: labels
     - include: woonkamer_licht
     - include: werkkamer_licht
+    - include: hal_licht
     - include: dashboards
-    - label.woonkamer,lamp.buitenlamp,lamp.boekenkast,lamp.dubbelekast,lamp.ledlamp
+    - label.woonkamer,lamp.boekenkast,lamp.dubbelekast,lamp.ledlamp
     - label.werkkamer, lamp.werkkamer
+    - label.hal,lamp.buitenlamp
     - laad.main.dashboard

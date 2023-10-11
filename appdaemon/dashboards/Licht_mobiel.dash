@@ -11,6 +11,7 @@ layout:
     - include: dashboards
     - include: woonkamer_licht
     - include: werkkamer_licht
+    - include: hal_licht
     - label.woonkamer,lamp.boekenkast,lamp.dubbelekast,lamp.ledlamp
     - label.werkkamer, lamp.werkkamer
     - label.hal,lamp.buitenlamp
