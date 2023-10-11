@@ -1,0 +1,47 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+homeassistant:
+   longitude: 4.744741916656495
+   latitude: 52.00682838414826
+   elevation: -2
+   unit_system: metric
+   internal_url: "http://homeassistant.local:8123"
+   time_zone: Europe/Amsterdam
+   name: Home
+   auth_providers:
+    - type: homeassistant
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+input_select: !include input_select.yaml
+sensor: !include sensors.yaml
+light: !include light.yaml
+#customize: !include customize.yaml
+
+calendar:
+  - platform: caldav
+    url: https://caldav.icloud.com
+    username: rob@casakok.nl
+    password:  !secret caldav_pw
+    calendars:
+      - Gezin
+      - Thuis
+
+lovelace:
+  mode: storage
+  # Add yaml dashboards
+  dashboards:
+    lovelace-minimalist:
+      mode: yaml
+      title: Minimalist
+      icon: mdi:script
+      show_in_sidebar: true
+      filename: lovelace-minimalist.yaml

@@ -1,0 +1,42 @@
+nacht_mode:
+  alias: Huis - Zet nacht mode aan en zet alle lichten uit
+  sequence:
+  - service: light.turn_off
+    data: {}
+    target:
+      device_id:
+      - fcac55c8362e60f0e6d17e348bb06518
+      entity_id:
+      - light.tradfri_driver_30w
+      - light.tradfri_driver_10w
+  - service: switch.turn_off
+    data: {}
+    target:
+      device_id: b082b444775cc52fcd20dbd7f792be67
+  - service: input_select.select_option
+    data:
+      option: Nacht
+    target:
+      entity_id: input_select.aanwezigheid
+  mode: single
+  icon: mdi:weather-night
+thuis_mode:
+  alias: Huis - Zet dag mode aan
+  sequence:
+  - service: input_select.select_option
+    data:
+      option: Thuis
+    target:
+      entity_id: input_select.aanwezigheid
+  mode: single
+  icon: mdi:home
+vakantie:
+  alias: Huis - Zet vakantie mode aan
+  sequence:
+  - service: input_select.select_option
+    data:
+      option: Vakantie
+    target:
+      entity_id: input_select.aanwezigheid
+  mode: single
+  icon: mdi:road

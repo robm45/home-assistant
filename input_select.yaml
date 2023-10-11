@@ -1,0 +1,14 @@
+dagdeel:      
+  name: Dagdeel
+  options:   
+    - Ochtend              
+    - Middag    
+    - Avond                         
+    - Nacht
+aanwezigheid:                      
+  name: Aanwezigheid
+  options:
+    - Thuis                 
+    - Weg    
+    - Nacht
+    - Vakantie

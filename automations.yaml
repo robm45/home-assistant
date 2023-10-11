@@ -1,0 +1,287 @@
+- id: '1687975419789'
+  alias: Trapkast - zet lamp aan wanneer deur opengaat
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: 7e8eefe3cc57aa76d2072a7356d8f184
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening_2
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: light.turn_on
+    data: {}
+    target:
+      device_id: 7075f55f063247eb600f393a09950936
+  mode: single
+- id: '1687975645827'
+  alias: Trapkast - zet licht uit wanneer deur sluit
+  description: ''
+  trigger:
+  - type: not_opened
+    platform: device
+    device_id: 7e8eefe3cc57aa76d2072a7356d8f184
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening_2
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: light.turn_off
+    data: {}
+    target:
+      device_id: 7075f55f063247eb600f393a09950936
+  mode: single
+- id: '1687977206456'
+  alias: Trapkast - zet licht uit na 5 minuten
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: 7e8eefe3cc57aa76d2072a7356d8f184
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening_2
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+  condition: []
+  action:
+  - service: light.turn_off
+    data: {}
+    target:
+      device_id: 7075f55f063247eb600f393a09950936
+  - service: notify.mobile_app_heroix
+    data:
+      message: trapkast licht aan
+  mode: single
+- id: '1687982449764'
+  alias: Voor buiten - zet lamp aan bij zonsondergang
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: 0
+  condition: []
+  action:
+  - service: light.turn_on
+    data: {}
+    target:
+      entity_id: light.innr_rb_265_light_1
+  mode: single
+- id: '1687985176290'
+  alias: Werkkamer - zet lampen aan bij beweging en lichtsterkte lager dan 75
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - binary_sensor.lumi_lumi_sensor_motion_aq2_motion
+    from: 'off'
+    to: 'on'
+  condition:
+  - condition: numeric_state
+    entity_id: sensor.xiaomi_lumi_sen_ill_mgl01_illuminance
+    below: 75
+  action:
+  - service: light.turn_on
+    data:
+      brightness_pct: 70
+      color_temp: 427
+    target:
+      entity_id: light.licht_werkkamer
+  mode: single
+- id: '1688070456354'
+  alias: Woonkamer - Zet licht aan in woonkamer beneden 75lx
+  description: ''
+  trigger:
+  - type: illuminance
+    platform: device
+    device_id: 42c95c5de5f13c39a47072aa7ee06c24
+    entity_id: sensor.xiaomi_lumi_sen_ill_mgl01_illuminance_2
+    domain: sensor
+    below: 75
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+  condition: []
+  action:
+  - service: light.turn_on
+    data: {}
+    target:
+      entity_id:
+      - light.tradfri_driver_30w
+      - light.tradfri_driver_10w
+  - service: switch.turn_on
+    data: {}
+    target:
+      device_id: b082b444775cc52fcd20dbd7f792be67
+  mode: single
+- id: '1688418840325'
+  alias: Werkkamer - zet lamp uit wanneer 5 minuten geen beweging
+  description: ''
+  trigger:
+  - type: no_motion
+    platform: device
+    device_id: fe67546c7c34ca18cfd31bee3ce705d9
+    entity_id: binary_sensor.lumi_lumi_sensor_motion_aq2_motion
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+  condition: []
+  action:
+  - service: light.turn_off
+    data: {}
+    target:
+      entity_id: light.licht_werkkamer
+  mode: single
+- id: '1688452636868'
+  alias: Woonkamer - zet alle lichten uit
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_select.aanwezigheid
+    from: Thuis
+    to: Nacht
+  condition: []
+  action:
+  - service: light.turn_off
+    data: {}
+    target:
+      device_id:
+      - fcac55c8362e60f0e6d17e348bb06518
+      - a89a2fa043c21fa3c5676b9a277b3e65
+      - 0bad7cad8c7e09889a178383dc6a00e9
+  - service: switch.turn_off
+    data: {}
+    target:
+      device_id: b082b444775cc52fcd20dbd7f792be67
+  mode: single
+- id: '1688452783400'
+  alias: Woonkamer - zet aanwezigheid op thuis
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+    offset: 0
+  condition: []
+  action:
+  - service: input_select.select_option
+    data:
+      option: Thuis
+    target:
+      entity_id: input_select.aanwezigheid
+  mode: single
+- id: '1688583757873'
+  alias: Woonkamer - Zet lichten uit boven de 75lx
+  description: ''
+  trigger:
+  - type: illuminance
+    platform: device
+    device_id: 42c95c5de5f13c39a47072aa7ee06c24
+    entity_id: sensor.xiaomi_lumi_sen_ill_mgl01_illuminance_2
+    domain: sensor
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+    above: 75
+  condition: []
+  action:
+  - service: light.turn_off
+    data: {}
+    target:
+      entity_id:
+      - light.tradfri_driver_30w
+      - light.tradfri_driver_10w
+  - service: switch.turn_off
+    data: {}
+    target:
+      device_id: b082b444775cc52fcd20dbd7f792be67
+  mode: single
+- id: '1688627868292'
+  alias: Achterdeur - Stuur bericht naar mobiel als deur opengaat en status is nacht,
+    weg of vakantie
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: c2dd4513cf6e558d3c7db6d95b31f010
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening_3
+    domain: binary_sensor
+  condition:
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: input_select.aanwezigheid
+      state: Nacht
+    - condition: state
+      entity_id: input_select.aanwezigheid
+      state: Weg
+    - condition: state
+      entity_id: input_select.aanwezigheid
+      state: Vakantie
+  action:
+  - service: notify.mobile_app_heroix
+    data:
+      message: Achterdeur is geopened
+  mode: single
+- id: '1688628187124'
+  alias: Voordeur - Stuur bericht naar mobiel als deur opengaat en status is nacht,
+    weg of vakantie
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: ad1c1d130eb42b5ed574a33d578ab753
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening_4
+    domain: binary_sensor
+  condition:
+  - condition: or
+    conditions:
+    - condition: state
+      entity_id: input_select.aanwezigheid
+      state: Nacht
+    - condition: state
+      entity_id: input_select.aanwezigheid
+      state: Weg
+    - condition: state
+      entity_id: input_select.aanwezigheid
+      state: Vakantie
+  action:
+  - service: notify.mobile_app_heroix
+    data:
+      message: Voordeur is geopend
+  mode: single
+- id: '1688633492580'
+  alias: Werkkamer - Stuur bericht wanneer raam open en zonbescherming aanstaat
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.zon_sensor_luminance
+    above: 40000
+  condition:
+  - condition: state
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_opening_6
+    state: 'on'
+  action:
+  - service: notify.mobile_app_heroix
+    data:
+      message: Raam werkkamer open
+  mode: single
+- id: '1696254532012'
+  alias: 1st verdieping - rookmelding
+  description: ''
+  trigger:
+  - type: smoke
+    platform: device
+    device_id: ac11d0c7be26ef6d458ef88abfafcb7c
+    entity_id: b99bdf91aa2448f5bee596f974d56f8d
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: notify.mobile_app_heroix
+    data:
+      message: Brandmelder 1st verdieping
+  mode: single
