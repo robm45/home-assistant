@@ -16,3 +16,8 @@ lamp.ledlamp:
     title: Ledlamp
     title_style: "font-size: 10pt;"
 
+lamp.kerstboom:
+    widget_type: switch
+    entity: switch.tz3000_1obwwnmq_ts011f_schakelaar
+    title: kerstboom
+    title_style: "font-size: 10pt;"
