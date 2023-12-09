@@ -1,7 +1,7 @@
 #
 # Main arguments, all optional
 #
-title: Test
+title: Kameras
 widget_dimensions: [400, 400]
 widget_margins: [5, 5]
 columns: 2
