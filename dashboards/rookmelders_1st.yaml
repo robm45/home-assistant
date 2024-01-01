@@ -1,0 +1,49 @@
+sensor.overloop1st.rookmelder:                                                                  
+    widget_type: sensor                                                                        
+    entity: binary_sensor.frient_a_s_smszb_120_smoke
+    title: overloop_1st(RM-02)             
+    title_style: "font-size: 10pt;"                                                           
+
+sensor.overloop1st.rookmelder_bat:                                                                  
+    widget_type: sensor                                                                        
+    entity: sensor.frient_a_s_smszb_120_battery
+    title: overloop1st(RM-02)             
+    title_style: "font-size: 10pt;"                                                           
+
+                                                                                            
+sensor.kamer_rene.rookmelder:                                                                  
+    widget_type: sensor                                                                        
+    entity: binary_sensor.frient_a_s_smszb_120_iaszone
+    title: kamer_rene(RM-03)            
+    title_style: "font-size: 10pt;"  
+
+sensor.kamer_rene.rookmelder_bat:                                                                  
+    widget_type: sensor                                                                        
+    entity: sensor.frient_a_s_smszb_120_battery_6
+    title: kamer_rene(RM-03)             
+    title_style: "font-size: 10pt;"                                                           
+
+sensor.werkkamer.rookmelder:                                                                  
+    widget_type: sensor                                                                        
+    entity: binary_sensor.frient_a_s_smszb_120_smoke_8
+    title: werkkamer(RM-05)             
+    title_style: "font-size: 10pt;"                                                              
+
+sensor.werkkamer.rookmelder_bat:                                                                  
+    widget_type: sensor                                                                        
+    entity: sensor.frient_a_s_smszb_120_battery_8
+    title: werkkamer(RM-05)             
+    title_style: "font-size: 10pt;"                                                           
+
+sensor.kleine_kamer.rookmelder:                                                                  
+    widget_type: sensor                                                                        
+    entity: binary_sensor.frient_a_s_smszb_120_smoke_3
+    title: kleine_kamer(RM-09)             
+    title_style: "font-size: 10pt;"                                                              
+
+sensor.kleine_kamer.rookmelder_bat:                                                                  
+    widget_type: sensor                                                                        
+    entity: sensor.frient_a_s_smszb_120_battery_3
+    title: kleine_kamer(RM-09)             
+    title_style: "font-size: 10pt;"                                                           
+

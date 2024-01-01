@@ -1,0 +1,49 @@
+sensor.overloop2de.rookmelder:                                                                  
+    widget_type: sensor                                                                        
+    entity: binary_sensor.frient_a_s_smszb_120_smoke_6
+    title: overloop_2de(RM-01)             
+    title_style: "font-size: 10pt;"                                                           
+
+sensor.overloop2de.rookmelder_bat:                                                                  
+    widget_type: sensor                                                                        
+    entity: sensor.frient_a_s_smszb_120_battery_6
+    title: overloop2de(RM-01)             
+    title_style: "font-size: 10pt;"                                                           
+
+                                                                                            
+sensor.slaapkamer.rookmelder:                                                                  
+    widget_type: sensor                                                                        
+    entity: binary_sensor.frient_a_s_smszb_120_smoke_9
+    title: slaapkamer(RM-06)            
+    title_style: "font-size: 10pt;"  
+
+sensor.slaapkamer.rookmelder_bat:                                                                  
+    widget_type: sensor                                                                        
+    entity: sensor.frient_a_s_smszb_120_battery_9
+    title: slaapkamer(RM-06)             
+    title_style: "font-size: 10pt;"                                                           
+
+
+sensor.zolderkamer.rookmelder:                                                                  
+    widget_type: sensor                                                                        
+    entity: binary_sensor.frient_a_s_smszb_120_smoke_7
+    title: zolderkamer(RM-10)             
+    title_style: "font-size: 10pt;"                                                              
+
+sensor.zolderkamer.rookmelder_bat:                                                                  
+    widget_type: sensor                                                                        
+    entity: sensor.frient_a_s_smszb_120_battery_7
+    title: zolderkamer(RM-10)             
+    title_style: "font-size: 10pt;"                                                           
+
+sensor.washok.comelder:                                                                  
+    widget_type: sensor                                                                        
+    entity: binary_sensor.sensorcowashok_gas
+    title: washok(comelder)             
+    title_style: "font-size: 10pt;"                                                              
+
+sensor.washok.comelder_bat:                                                                  
+    widget_type: sensor                                                                        
+    entity: sensor.sensorcowashok_battery
+    title: washok(comelder)             
+    title_style: "font-size: 10pt;"                                                           
