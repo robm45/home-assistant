@@ -54,7 +54,7 @@
       message: trapkast licht aan
   mode: single
 - id: '1687982449764'
-  alias: Voor buiten - zet lamp aan bij zonsondergang
+  alias: Voordeur - zet lamp aan bij zonsondergang
   description: ''
   trigger:
   - platform: sun
@@ -102,7 +102,10 @@
       hours: 0
       minutes: 5
       seconds: 0
-  condition: []
+  condition:
+  - condition: sun
+    before: sunset
+    before_offset: 02:00
   action:
   - service: light.turn_on
     data: {}
@@ -113,7 +116,10 @@
   - service: switch.turn_on
     data: {}
     target:
-      device_id: b082b444775cc52fcd20dbd7f792be67
+      device_id:
+      - b082b444775cc52fcd20dbd7f792be67
+      entity_id:
+      - switch.innr_switch_02_schakelaar
   mode: single
 - id: '1688418840325'
   alias: Werkkamer - zet lamp uit wanneer 5 minuten geen beweging
@@ -134,29 +140,6 @@
     data: {}
     target:
       entity_id: light.licht_werkkamer
-  mode: single
-- id: '1688452636868'
-  alias: Woonkamer - zet alle lichten uit
-  description: ''
-  trigger:
-  - platform: state
-    entity_id:
-    - input_select.aanwezigheid
-    from: Thuis
-    to: Nacht
-  condition: []
-  action:
-  - service: light.turn_off
-    data: {}
-    target:
-      device_id:
-      - fcac55c8362e60f0e6d17e348bb06518
-      - a89a2fa043c21fa3c5676b9a277b3e65
-      - 0bad7cad8c7e09889a178383dc6a00e9
-  - service: switch.turn_off
-    data: {}
-    target:
-      device_id: b082b444775cc52fcd20dbd7f792be67
   mode: single
 - id: '1688452783400'
   alias: Woonkamer - zet aanwezigheid op thuis
@@ -198,7 +181,10 @@
   - service: switch.turn_off
     data: {}
     target:
-      device_id: b082b444775cc52fcd20dbd7f792be67
+      device_id:
+      - b082b444775cc52fcd20dbd7f792be67
+      entity_id:
+      - switch.innr_switch_02_schakelaar
   mode: single
 - id: '1688627868292'
   alias: Achterdeur - Stuur bericht naar mobiel als deur opengaat en status is nacht,
@@ -228,8 +214,8 @@
       message: Achterdeur is geopened
   mode: single
 - id: '1688628187124'
-  alias: Voordeur - Stuur bericht naar mobiel als deur opengaat en status is nacht,
-    weg of vakantie
+  alias: Hal - Stuur bericht naar mobiel als deur opengaat en status is nacht, weg
+    of vakantie
   description: ''
   trigger:
   - type: opened
@@ -284,4 +270,36 @@
   - service: notify.mobile_app_heroix
     data:
       message: Brandmelder 1st verdieping
+  mode: single
+- id: '1703078084751'
+  alias: 'Keuken - Stuur melding bij lekkage '
+  description: ''
+  trigger:
+  - type: moist
+    platform: device
+    device_id: 2ec389e8b92b0f52bc79570c1e11968a
+    entity_id: aa5d8ec637ee922170af5e5d5333adee
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: notify.mobile_app_heroix
+    data:
+      message: Keuken -  onder de vaatwasser is het nat
+      title: Keuken - watersensor
+  mode: single
+- id: '1703078233883'
+  alias: Washok - melding bij lekkage
+  description: ''
+  trigger:
+  - type: moist
+    platform: device
+    device_id: 0cac7bc7a71ae5ee6d6b3064371e49ba
+    entity_id: 902c20c782fa90151da53fa3eeb525b3
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: notify.mobile_app_heroix
+    data:
+      message: Washok - nat achter de droger
+      title: Washok watersensor
   mode: single

@@ -8,6 +8,9 @@ laad.licht.dashboard:
     widget_type: navigate
     title: Licht Panel
     icon_inactive: mdi-view-dashboard
+    args:
+      timeout: 20
+      return: Main
     dashboard: Licht
 
 laad.klimaat.dashboard:

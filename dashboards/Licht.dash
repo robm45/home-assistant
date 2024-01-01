@@ -12,7 +12,7 @@ layout:
     - include: werkkamer_licht
     - include: hal_licht
     - include: dashboards
-    - label.woonkamer,lamp.boekenkast,lamp.dubbelekast,lamp.ledlamp,lamp.kerstboom
+    - label.woonkamer,lamp.boekenkast,lamp.dubbelekast,lamp.ledlamp,lamp.kerstboom,lamp.kerstverlichting
     - label.werkkamer, lamp.werkkamer
     - label.hal,lamp.buitenlamp
     - laad.main.dashboard

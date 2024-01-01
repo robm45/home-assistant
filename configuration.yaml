@@ -35,6 +35,44 @@ calendar:
       - Gezin
       - Thuis
 
+recorder:
+   db_url: !secret db_url
+   include:
+     domains: 
+        - light
+        - switch
+        - sensor
+   exclude: 
+     domains:
+        - hassio
+        - cloud
+        
+# Example configuration.yaml
+sql:
+  - name: Sun state
+    query: >
+      SELECT
+        states.state
+      FROM
+        states
+        LEFT JOIN state_attributes ON (
+          states.attributes_id = state_attributes.attributes_id
+        )
+      WHERE
+        metadata_id = (
+          SELECT
+            metadata_id
+          FROM
+            states_meta
+          where
+            entity_id = 'sun.sun'
+        )
+      ORDER BY
+        state_id DESC
+      LIMIT
+        1;
+    column: "state"
+
 lovelace:
   mode: storage
   # Add yaml dashboards

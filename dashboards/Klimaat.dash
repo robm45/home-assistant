@@ -8,6 +8,7 @@ columns: 7
 
 layout:
     - include: labels
+    - include: dashboards
     - include: werkkamer_sensors
     - include: kleinekamer_sensors
     - include: slaapkamer_sensors
@@ -16,3 +17,5 @@ layout:
     - label.kleinekamer, sensor.kleinekamer.temperatuur, sensor.kleinekamer.vochtigheid, sensor.kleinekamer.luchtdruk
     - label.slaapkamer, sensor.slaapkamer.temperatuur, sensor.slaapkamer.vochtigheid, sensor.slaapkamer.luchtdruk
     - label.zolderkamer, sensor.zolderkamer.temperatuur, sensor.zolderkamer.vochtigheid, sensor.zolderkamer.luchtdruk
+    - laad.main.dashboard
+

@@ -21,3 +21,9 @@ lamp.kerstboom:
     entity: switch.tz3000_1obwwnmq_ts011f_schakelaar
     title: kerstboom
     title_style: "font-size: 10pt;"
+    
+lamp.kerstverlichting:
+    widget_type: switch
+    entity: switch.innr_switch_02_schakelaar
+    title: kerstverlichting
+    title_style: "font-size: 10pt;"
