@@ -1,9 +1,9 @@
 camera.voordeur:
-   entity_id: camera.voordeur_sub 
-   base_url: http://192.168.171.71:8123
-   refresh: 5
+   widget_type: camera
+   entity_id: camera.voordeur_sub
+   base_url: http://192.168.178.71
 
 camera.achterdeur:
+   widget_type: camera
    entity_id: camera.achterdeur_sub
-   base_url: http://192.168.171.71:8123
-   refresh: 5
+   base_url: http://192.168.178.71

@@ -8,6 +8,7 @@ columns: 7
 
 layout:
     - include: labels
+    - include: dashboards
     - include: woonkamer_sensors
     - include: hal_sensors
     - include: werkkamer_sensors
@@ -19,3 +20,4 @@ layout:
     - label.werkkamer, sensor.werkkamer.raamsensor, spacer(1x1), sensor.werkkamer.bewegingssensor, spacer(1x1), sensor.werkkamer.licht
     - label.kleinekamer, sensor.kleinekamer.raamsensor
     - label.zolderkamer, sensor.zolderkamer.raamsensor
+    - laad.main.dashboard

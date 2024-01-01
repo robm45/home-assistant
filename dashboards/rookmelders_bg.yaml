@@ -1,18 +1,38 @@
 sensor.keuken.rookmelder:                                                                  
     widget_type: sensor                                                                        
     entity: binary_sensor.frient_a_s_smszb_120_smoke_2
-    title: keuken             
+    title: keuken(RM-08)             
+    title_style: "font-size: 10pt;"                                                           
+
+sensor.keuken.rookmelder_bat:                                                                  
+    widget_type: sensor                                                                        
+    entity: sensor.frient_a_s_smszb_120_battery_2
+    title: keuken(RM-08)             
     title_style: "font-size: 10pt;"                                                           
 
                                                                                             
 sensor.kamer.rookmelder:                                                                  
     widget_type: sensor                                                                        
     entity: binary_sensor.frient_a_s_smszb_120_smoke_5
-    title: kamer             
+    title: kamer(RM-04)            
+    title_style: "font-size: 10pt;"  
+
+sensor.kamer.rookmelder_bat:                                                                  
+    widget_type: sensor                                                                        
+    entity: sensor.frient_a_s_smszb_120_battery_5
+    title: kamer(RM-04)             
     title_style: "font-size: 10pt;"                                                           
+
 
 sensor.hal.rookmelder:                                                                  
     widget_type: sensor                                                                        
-    entity: sensor.frient_a_s_smszb_120_battery_6
-    title: hal             
+    entity: binary_sensor.frient_a_s_smszb_120_smoke_4
+    title: hal(RM-07)             
+    title_style: "font-size: 10pt;"                                                              
+
+sensor.hal.rookmelder_bat:                                                                  
+    widget_type: sensor                                                                        
+    entity: sensor.frient_a_s_smszb_120_battery_4
+    title: hal(RM-07)             
     title_style: "font-size: 10pt;"                                                           
+

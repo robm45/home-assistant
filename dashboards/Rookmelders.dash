@@ -10,7 +10,12 @@ layout:
     - include: labels
     - include: dashboards
     - include: rookmelders_bg
-#    - include: rookmelders_1st
-#    - include: rookmelders_2de
-    - label.begane.grond , sensor.keuken.rookmelder, sensor.kamer.rookmelder, sensor.hal.rookmelder
+    - include: rookmelders_1st
+    - include: rookmelders_2de
+    - label.begane.grond, sensor.keuken.rookmelder, sensor.kamer.rookmelder, sensor.hal.rookmelder
+    - label.begane.grond, sensor.keuken.rookmelder_bat, sensor.kamer.rookmelder_bat, sensor.hal.rookmelder_bat
+    - label.1st.verdieping, sensor.overloop1st.rookmelder, sensor.kamer_rene.rookmelder, sensor.werkkamer.rookmelder, sensor.kleine_kamer.rookmelder
+    - label.1st.verdieping, sensor.overloop1st.rookmelder_bat, sensor.kamer_rene.rookmelder_bat, sensor.werkkamer.rookmelder_bat, sensor.kleine_kamer.rookmelder_bat
+    - label.2de.verdieping, sensor.overloop2de.rookmelder, sensor.slaapkamer.rookmelder, sensor.zolderkamer.rookmelder, sensor.washok.comelder
+    - label.2de.verdieping, sensor.overloop2de.rookmelder_bat, sensor.slaapkamer.rookmelder_bat, sensor.zolderkamer.rookmelder_bat, sensor.washok.comelder_bat
     - laad.main.dashboard

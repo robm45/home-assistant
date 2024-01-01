@@ -38,12 +38,27 @@ humidity.buiten:
     units: "%"                                            
     precision: 1  
 
-co2.binnen:                                                                             
-    widget_type: sensor                                                                 
-    widget_style: "background: lightblue"                                                     
-    title: CO2                                                                          
-    title_style: "font-size: 10pt; color: black"                                                     
-    value_style: "font-size: 18pt; color: black;"                                       
-    entity: sensor.weather_station_co2           
-    units: "ppm"                                                                           
-    precision: 0     
+#co2.binnen:                                                                             
+#    widget_type: sensor                                                                 
+#    widget_style: "background: lightblue"                                                     
+#    title: CO2                                                                          
+#    title_style: "font-size: 10pt; color: black"                                                     
+#    value_style: "font-size: 18pt; color: black;"                                       
+#    entity: sensor.weather_station_co2           
+#    units: "ppm"                                                                           
+#    precision: 0 
+
+co2.binnen:
+  widget_type: gauge
+  entity: sensor.weather_station_co2
+  title: CO2
+  title_style: "font-size: 10pt; color: white"                                                     
+  max: 2500
+  min: 400
+  low_color: "#009900"
+  medium_color: "#ffcc00"
+  high_color: "#ff0000"
+  bgcolor: "ffffff"
+  color: "000000"
+  units: "ppm"
+  precision: 0  
