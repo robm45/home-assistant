@@ -8,4 +8,4 @@ columns: 2
 
 layout:
     - include: camera
-    - camera.voordeur, camera.achterdeurr
+    - camera.voordeur, camera.achterdeur

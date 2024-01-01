@@ -1,9 +1,9 @@
 camera.voordeur:
    entity_id: camera.voordeur_sub 
-   base_url: http://192.168.171.71
-   stream: on
+   base_url: http://192.168.171.71:8123
+   refresh: 5
 
 camera.achterdeur:
    entity_id: camera.achterdeur_sub
-   base_url: http://192.168.171.71
-   stream: on
+   base_url: http://192.168.171.71:8123
+   refresh: 5

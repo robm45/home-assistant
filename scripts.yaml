@@ -12,7 +12,11 @@ nacht_mode:
   - service: switch.turn_off
     data: {}
     target:
-      device_id: b082b444775cc52fcd20dbd7f792be67
+      device_id:
+      - b082b444775cc52fcd20dbd7f792be67
+      entity_id:
+      - switch.innr_switch_02_schakelaar
+      - switch.tz3000_1obwwnmq_ts011f_schakelaar
   - service: input_select.select_option
     data:
       option: Nacht
