@@ -2,7 +2,7 @@
 # Main arguments, all optional
 #
 title: Hello Panel
-widget_dimensions: [95, 90]
+widget_dimensions: [95, 91]
 widget_margins: [5, 5]
 columns: 7
 global_parameters:

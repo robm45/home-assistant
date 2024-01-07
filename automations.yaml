@@ -105,7 +105,7 @@
   condition:
   - condition: sun
     before: sunset
-    before_offset: 02:00
+    before_offset: 02:00:00
   action:
   - service: light.turn_on
     data: {}
@@ -303,3 +303,16 @@
       message: Washok - nat achter de droger
       title: Washok watersensor
   mode: single
+- id: '1704113535929'
+  alias: Werkkamer - batterij nivo laag rookmelder
+  description: ''
+  use_blueprint:
+    path: sbyx/low-battery-level-detection-notification-for-all-battery-sensors.yaml
+    input:
+      exclude:
+        entity_id: []
+        device_id: 9d8d30891c333014c96c42eca8fe960f
+      actions:
+      - service: notify.mobile_app_heroix
+        data:
+          message: Batterij nivo laag
